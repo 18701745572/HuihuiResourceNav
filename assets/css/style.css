@@ -1,0 +1,198 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #1a1a1a, #2d2d2d, #1a1a1a);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+    color: #fff;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(197, 164, 126, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(197, 164, 126, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 卡片样式 */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: rgba(197, 164, 126, 0.5);
+    box-shadow: 0 0 0 4px rgba(197, 164, 126, 0.1);
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #C5A47E, #8B7355);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(197, 164, 126, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-secondary:hover {
+    background: rgba(197, 164, 126, 0.2);
+    color: #C5A47E;
+}
+
+/* 标题样式 */
+.page-title {
+    color: #C5A47E;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* 表格样式 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table th {
+    color: #C5A47E;
+    font-weight: 600;
+}
+
+/* 动画 */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* 提示消息样式 */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background: rgba(105, 219, 124, 0.2);
+    color: #69db7c;
+    border: 1px solid rgba(105, 219, 124, 0.3);
+}
+
+.alert-error {
+    background: rgba(255, 99, 71, 0.2);
+    color: #ff6347;
+    border: 1px solid rgba(255, 99, 71, 0.3);
+}
+
+/* 导航栏样式 */
+.navbar {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.navbar-brand {
+    color: #C5A47E;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* 图标样式 */
+.icon {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+} 

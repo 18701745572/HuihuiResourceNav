@@ -1,0 +1,69 @@
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
+
+# 配置文件
+config.php
+
+# 日志文件
+*.log
+error_log
+logs/
+
+# 缓存
+cache/
+*.cache
+
+# 上传文件目录
+uploads/
+
+# IDE和编辑器文件
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+*.orig
+*~
+.project
+.buildpath
+.settings/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Composer
+vendor/
+composer.lock
+
+# 环境文件
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.backup
+.phpunit.result.cache
+
+# 其他
+node_modules/
+npm-debug.log
+yarn-error.log
